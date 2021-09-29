@@ -6,21 +6,21 @@ class Statistics extends Component {
     const { good, neutral, bad, total, positivePercentage } = this.props;
 
     return (
-      <ul>
+      <ul className="list">
         <li>
-          Good: <span>{good}</span>
+          <span>Good:</span> <span>{good}</span>
         </li>
         <li>
-          Neutral: <span>{neutral}</span>
+          <span>Neutral:</span> <span>{neutral}</span>
         </li>
         <li>
-          Bad: <span>{bad}</span>
+          <span>Bad:</span> <span>{bad}</span>
         </li>
         <li>
-          Total: <span>{total}</span>
+          <spam>Total:</spam> <span>{total}</span>
         </li>
         <li>
-          Positive feadback: <span>{positivePercentage}%</span>
+          <span>Positive feadback:</span> <span>{positivePercentage}%</span>
         </li>
       </ul>
     );
