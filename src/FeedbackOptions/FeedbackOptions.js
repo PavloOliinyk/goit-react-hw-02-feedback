@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FeedbackOptions extends Component {
   render() {
+    const { options, onLeaveFeedback } = this.props;
     return (
       <ul>
-        {this.props.options.map(option => (
+        {options.map(option => (
           <li key={option}>
             <button
               type="button"
               value={option}
-              onClick={() => this.props.onLeaveFeedback(option)}
+              onClick={() => onLeaveFeedback(option)}
             >
               {option}
             </button>
@@ -19,5 +21,10 @@ class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.oneOf(['good', 'neutral', 'bad'])),
+};
 
 export default FeedbackOptions;

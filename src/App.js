@@ -22,7 +22,6 @@ class App extends Component {
   handleClick = option => {
     this.setState(prevState => {
       return {
-        ...prevState,
         [option]: prevState[option] + 1,
       };
     });
